@@ -25,7 +25,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +64,45 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.navBar__topBar__group1 {
+  display: flex;
+  justify-content: space-between;
+}
+.container {
+  width: 100vw;
+}
+
+.navBar__topBar__group1 {
+  background-color: aqua;
+}
+.navBar__secondBar {
+  background-color: rgba(0, 255, 255, 0.616);
+}
+
+.navBar__secondBar {
+  display: flex;
+  place-content: space-between;
+}
+
+.navBar__secondBar__logo {
+  width: 20px;
+}
+
+.navBar__secondBar__menu-btns__mn {
+  display: flex;
+  
+}
+
+ul.navBar__secondBar__menu-btns__mn li:not(:last-child){
+  padding-right : 40px;
+}
+
+.navBar__thirdBar {
+  display: flex;
+}
+.navBar__thirdBar li:not(:last-child) {
+  padding-right : 40px;
+
 }
