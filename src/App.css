@@ -17,3 +17,8 @@ span.badge.badge-pill.badge-danger {
 .d-flex.justify-content-between.w-100 {
   padding: .7rem;
 }
+
+.navbar-brand {
+  margin-right: 0px !important;
+
+}

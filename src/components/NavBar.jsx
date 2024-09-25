@@ -11,14 +11,14 @@ const NavBar = () => {
     {/* Grupo 2: Categorías */}
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Women</a>
+        <a class="nav-link" href="#">Mujeres</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Men</a>
+        <a class="nav-link" href="#">Hombres</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Company
+          La Empresa
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
@@ -28,7 +28,7 @@ const NavBar = () => {
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Stores</a>
+        <a class="nav-link" href="#">Tiendas</a>
       </li>
     </ul>
 
