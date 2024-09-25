@@ -1,36 +1,41 @@
 import React from 'react'
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
   return (
-    <div className="container">
-    <div className="navBar">
-      <div className="navBar__topBar__group1">
-        <div className="navBar__topBar__group1">input currency</div>
-        <div className="navBar__topBar__group1__sign-in-button">Sign in</div>
-        <div className="navBar__topBar__group1__account">Create an account</div>
-        </div>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="d-flex justify-content-between w-100">
+    {/* Grupo 1: Marca */}
+    <a class="navbar-brand" href="#">RocketStore</a>
 
-      <div className="navBar__secondBar">
-        <div className="navBar__secondBar__logo">logo</div>
-        <div className="navBar__secondBar__menu-btns">
-          <ul className='navBar__secondBar__menu-btns__mn'>
-            <li>Women</li>
-            <li>Men</li>
-            <li>Company</li>
-            <li>Stores</li>
-          </ul>
+    {/* Grupo 2: Categorías */}
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Women</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Men</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Company
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
-        <ul className='navBar__thirdBar'>
-            <li>Search</li>
-            <li>Help</li>
-            <li>Cart</li>
-          </ul>
-        </div>
-        
-      </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Stores</a>
+      </li>
+    </ul>
 
-
+    {/* Grupo 3: Carrito de compra */}
+<CartWidget></CartWidget>
+  </div>
+</nav>
   )
 }
 
