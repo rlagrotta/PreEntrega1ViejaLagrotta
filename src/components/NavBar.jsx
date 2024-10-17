@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CartWidget from './CartWidget'
 
-const NavBar = () => {
+const NavBar = ({category, updateCategory}) => {
+
+    // useEffect para observar cambios en la categoría
+    useEffect(() => {
+
+      if (category==="jewelery") {
+        console.log(`La categoría seleccionada es: jewelery`)
+      } else if (category===`men's clothing`){    
+        console.log(`La categoría seleccionada es: men's clothing`)
+      }
+    }, [category]) // Se ejecutará cada vez que 'category' cambie
+
+  function handleLadies(){
+    updateCategory("jewelery")
+  }
+
+  function handleGentlemen(){
+    updateCategory("men's clothing")    
+
+  }
   return (
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="d-flex justify-content-between w-100">
@@ -11,10 +30,10 @@ const NavBar = () => {
     {/* Grupo 2: Categorías */}
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Mujeres</a>
+        <a class="nav-link" onClick={handleLadies} href="#">Joyas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Hombres</a>
+        <a class="nav-link" onClick={handleGentlemen} href="#">Ropa de Hombres</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
