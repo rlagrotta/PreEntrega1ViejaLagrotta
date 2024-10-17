@@ -21,8 +21,8 @@ function Layout(/* {children} */) {
 
   return (
     <>
-    <NavBar category={category}/>
-    <ItemContainerRP updateCategory={updateCategory}/>
+    <NavBar updateCategory={updateCategory}/>
+    <ItemContainerRP category={category}/>
 {/*     <CounterWithState/>
     <CounterWithRef/> */}
     </>
