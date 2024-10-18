@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react';
 const ItemContainerRP = ({ category }) => {
   const [data, setData] = useState([]);
 
-  function handleLinks(){
-
-  }
+  function handleLinks(e){
+    const value = JSON.parse(e.target.getAttribute("data-value"));
+    console.log(value)
+    }
 
   
   useEffect(() => {
@@ -41,7 +42,7 @@ const ItemContainerRP = ({ category }) => {
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
         <p className="card-text">{item.description}</p>
-        <a href="#" className="btn btn-primary">See more</a>
+        <a href="#" data-value={"category/" + item.id} onClick={handleLinks} className="btn btn-primary">See more</a>
       </div>
     </div>
   ));
