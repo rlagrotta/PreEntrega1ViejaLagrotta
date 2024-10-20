@@ -4,7 +4,7 @@ const ItemContainerRP = ({ category }) => {
   const [data, setData] = useState([]);
 
   function handleLinks(e){
-    const value = JSON.parse(e.target.getAttribute("data-value"));
+    const value = /* JSON.parse */(e.target.getAttribute("data-value"));
     console.log(value)
     }
 
@@ -42,7 +42,7 @@ const ItemContainerRP = ({ category }) => {
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
         <p className="card-text">{item.description}</p>
-        <a href="#" data-value={"category/" + item.id} onClick={handleLinks} className="btn btn-primary">See more</a>
+        <a href="#" data-value={`products/?${item.id}`} onClick={handleLinks} className="btn btn-primary">See more</a>
       </div>
     </div>
   ));
